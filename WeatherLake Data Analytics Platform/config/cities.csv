@@ -1,0 +1,101 @@
+location_id,city,district,state,country,latitude,longitude,timezone
+1,Mumbai,Mumbai City,Maharashtra,India,19.076,72.8777,Asia/Kolkata
+2,Delhi,Central Delhi,Delhi,India,28.6139,77.209,Asia/Kolkata
+3,Kolkata,Kolkata,West Bengal,India,22.5726,88.3639,Asia/Kolkata
+4,Chennai,Chennai,Tamil Nadu,India,13.0827,80.2707,Asia/Kolkata
+5,Bengaluru,Bengaluru Urban,Karnataka,India,12.9716,77.5946,Asia/Kolkata
+6,Hyderabad,Hyderabad,Telangana,India,17.385,78.4867,Asia/Kolkata
+7,Ahmedabad,Ahmedabad,Gujarat,India,23.0225,72.5714,Asia/Kolkata
+8,Pune,Pune,Maharashtra,India,18.5204,73.8567,Asia/Kolkata
+9,Surat,Surat,Gujarat,India,21.1702,72.8311,Asia/Kolkata
+10,Jaipur,Jaipur,Rajasthan,India,26.9124,75.7873,Asia/Kolkata
+11,Kanpur,Kanpur Nagar,Uttar Pradesh,India,26.4499,80.3319,Asia/Kolkata
+12,Lucknow,Lucknow,Uttar Pradesh,India,26.8467,80.9462,Asia/Kolkata
+13,Nagpur,Nagpur,Maharashtra,India,21.1458,79.0882,Asia/Kolkata
+14,Ghaziabad,Ghaziabad,Uttar Pradesh,India,28.6692,77.4538,Asia/Kolkata
+15,Indore,Indore,Madhya Pradesh,India,22.7196,75.8577,Asia/Kolkata
+16,Coimbatore,Coimbatore,Tamil Nadu,India,11.0168,76.9558,Asia/Kolkata
+17,Kochi,Ernakulam,Kerala,India,9.9312,76.2673,Asia/Kolkata
+18,Patna,Patna,Bihar,India,25.5941,85.1376,Asia/Kolkata
+19,Kozhikode,Kozhikode,Kerala,India,11.2588,75.7804,Asia/Kolkata
+20,Bhopal,Bhopal,Madhya Pradesh,India,23.2599,77.4126,Asia/Kolkata
+21,Thrissur,Thrissur,Kerala,India,10.5276,76.2144,Asia/Kolkata
+22,Vadodara,Vadodara,Gujarat,India,22.3072,73.1812,Asia/Kolkata
+23,Agra,Agra,Uttar Pradesh,India,27.1767,78.0081,Asia/Kolkata
+24,Visakhapatnam,Visakhapatnam,Andhra Pradesh,India,17.6868,83.2185,Asia/Kolkata
+25,Thiruvananthapuram,Thiruvananthapuram,Kerala,India,8.5241,76.9366,Asia/Kolkata
+26,Kannur,Kannur,Kerala,India,11.8745,75.3704,Asia/Kolkata
+27,Ludhiana,Ludhiana,Punjab,India,30.901,75.8573,Asia/Kolkata
+28,Nashik,Nashik,Maharashtra,India,19.9975,73.7898,Asia/Kolkata
+29,Vijayawada,NTR,Andhra Pradesh,India,16.5062,80.648,Asia/Kolkata
+30,Madurai,Madurai,Tamil Nadu,India,9.9252,78.1198,Asia/Kolkata
+31,Varanasi,Varanasi,Uttar Pradesh,India,25.3176,82.9739,Asia/Kolkata
+32,Meerut,Meerut,Uttar Pradesh,India,28.9845,77.7064,Asia/Kolkata
+33,Rajkot,Rajkot,Gujarat,India,22.3039,70.8022,Asia/Kolkata
+34,Jamshedpur,East Singhbhum,Jharkhand,India,22.8046,86.2029,Asia/Kolkata
+35,Srinagar,Srinagar,Jammu and Kashmir,India,34.0837,74.7973,Asia/Kolkata
+36,Asansol,Paschim Bardhaman,West Bengal,India,23.6739,87.148,Asia/Kolkata
+37,Dhanbad,Dhanbad,Jharkhand,India,23.7957,86.4304,Asia/Kolkata
+38,Ranchi,Ranchi,Jharkhand,India,23.3441,85.3096,Asia/Kolkata
+39,Raipur,Raipur,Chhattisgarh,India,21.2514,81.6296,Asia/Kolkata
+40,Jabalpur,Jabalpur,Madhya Pradesh,India,23.1815,79.9864,Asia/Kolkata
+41,Gwalior,Gwalior,Madhya Pradesh,India,26.2183,78.1828,Asia/Kolkata
+42,Prayagraj,Prayagraj,Uttar Pradesh,India,25.4358,81.8463,Asia/Kolkata
+43,Amritsar,Amritsar,Punjab,India,31.634,74.8723,Asia/Kolkata
+44,Bhilai,Durg,Chhattisgarh,India,21.1938,81.3509,Asia/Kolkata
+45,Chandigarh,Chandigarh,Chandigarh,India,30.7333,76.7794,Asia/Kolkata
+46,Guwahati,Kamrup Metropolitan,Assam,India,26.1445,91.7362,Asia/Kolkata
+47,Solapur,Solapur,Maharashtra,India,17.6599,75.9064,Asia/Kolkata
+48,Tiruchirappalli,Tiruchirappalli,Tamil Nadu,India,10.7905,78.7047,Asia/Kolkata
+49,Bareilly,Bareilly,Uttar Pradesh,India,28.367,79.4304,Asia/Kolkata
+50,Moradabad,Moradabad,Uttar Pradesh,India,28.8386,78.7733,Asia/Kolkata
+51,Mysuru,Mysuru,Karnataka,India,12.2958,76.6394,Asia/Kolkata
+52,Tiruppur,Tiruppur,Tamil Nadu,India,11.1085,77.3411,Asia/Kolkata
+53,Salem,Salem,Tamil Nadu,India,11.6643,78.146,Asia/Kolkata
+54,Aligarh,Aligarh,Uttar Pradesh,India,27.8974,78.088,Asia/Kolkata
+55,Jodhpur,Jodhpur,Rajasthan,India,26.2389,73.0243,Asia/Kolkata
+56,Dehradun,Dehradun,Uttarakhand,India,30.3165,78.0322,Asia/Kolkata
+57,Gorakhpur,Gorakhpur,Uttar Pradesh,India,26.7606,83.3732,Asia/Kolkata
+58,Bikaner,Bikaner,Rajasthan,India,28.0229,73.3119,Asia/Kolkata
+59,Amravati,Amravati,Maharashtra,India,20.9374,77.7796,Asia/Kolkata
+60,Noida,Gautam Buddha Nagar,Uttar Pradesh,India,28.5355,77.391,Asia/Kolkata
+61,Jalandhar,Jalandhar,Punjab,India,31.326,75.5762,Asia/Kolkata
+62,Cuttack,Cuttack,Odisha,India,20.4625,85.8828,Asia/Kolkata
+63,Firozabad,Firozabad,Uttar Pradesh,India,27.1591,78.3957,Asia/Kolkata
+64,Bokaro Steel City,Bokaro,Jharkhand,India,23.6693,86.1511,Asia/Kolkata
+65,Warangal,Hanamkonda,Telangana,India,17.9689,79.5941,Asia/Kolkata
+66,Ajmer,Ajmer,Rajasthan,India,26.4499,74.6399,Asia/Kolkata
+67,Nellore,Sri Potti Sriramulu Nellore,Andhra Pradesh,India,14.4426,79.9865,Asia/Kolkata
+68,Rourkela,Sundargarh,Odisha,India,22.2604,84.8536,Asia/Kolkata
+69,Jammu,Jammu,Jammu and Kashmir,India,32.7266,74.857,Asia/Kolkata
+70,Kolhapur,Kolhapur,Maharashtra,India,16.705,74.2433,Asia/Kolkata
+71,Mangaluru,Dakshina Kannada,Karnataka,India,12.9141,74.856,Asia/Kolkata
+72,Erode,Erode,Tamil Nadu,India,11.341,77.7172,Asia/Kolkata
+73,Udaipur,Udaipur,Rajasthan,India,24.5854,73.7125,Asia/Kolkata
+74,Davanagere,Davanagere,Karnataka,India,14.4644,75.9218,Asia/Kolkata
+75,Kurnool,Kurnool,Andhra Pradesh,India,15.8281,78.0373,Asia/Kolkata
+76,Durgapur,Paschim Bardhaman,West Bengal,India,23.5204,87.3119,Asia/Kolkata
+77,Vellore,Vellore,Tamil Nadu,India,12.9165,79.1325,Asia/Kolkata
+78,Tirunelveli,Tirunelveli,Tamil Nadu,India,8.7139,77.7567,Asia/Kolkata
+79,Guntur,Guntur,Andhra Pradesh,India,16.3067,80.4365,Asia/Kolkata
+80,Hubballi,Dharwad,Karnataka,India,15.3647,75.124,Asia/Kolkata
+81,Belagavi,Belagavi,Karnataka,India,15.8497,74.4977,Asia/Kolkata
+82,Mathura,Mathura,Uttar Pradesh,India,27.4924,77.6737,Asia/Kolkata
+83,Muzaffarpur,Muzaffarpur,Bihar,India,26.1209,85.3647,Asia/Kolkata
+84,Bhagalpur,Bhagalpur,Bihar,India,25.2425,86.9842,Asia/Kolkata
+85,Panipat,Panipat,Haryana,India,29.3909,76.9635,Asia/Kolkata
+86,Rohtak,Rohtak,Haryana,India,28.8955,76.6066,Asia/Kolkata
+87,Hisar,Hisar,Haryana,India,29.1492,75.7217,Asia/Kolkata
+88,Karnal,Karnal,Haryana,India,29.6857,76.9905,Asia/Kolkata
+89,Bilaspur,Bilaspur,Chhattisgarh,India,22.0797,82.1409,Asia/Kolkata
+90,Jhansi,Jhansi,Uttar Pradesh,India,25.4484,78.5685,Asia/Kolkata
+91,Saharanpur,Saharanpur,Uttar Pradesh,India,29.968,77.5552,Asia/Kolkata
+92,Tirupati,Tirupati,Andhra Pradesh,India,13.6288,79.4192,Asia/Kolkata
+93,Kalyan-Dombivli,Thane,Maharashtra,India,19.2403,73.1305,Asia/Kolkata
+94,Vasai-Virar,Palghar,Maharashtra,India,19.3919,72.8397,Asia/Kolkata
+95,Navi Mumbai,Thane,Maharashtra,India,19.033,73.0297,Asia/Kolkata
+96,Howrah,Howrah,West Bengal,India,22.5958,88.2636,Asia/Kolkata
+97,Nanded,Nanded,Maharashtra,India,19.1383,77.321,Asia/Kolkata
+98,Siliguri,Darjeeling,West Bengal,India,26.7271,88.3953,Asia/Kolkata
+99,Pimpri-Chinchwad,Pune,Maharashtra,India,18.6298,73.7997,Asia/Kolkata
+100,Bhiwandi,Thane,Maharashtra,India,19.2813,73.0483,Asia/Kolkata
