@@ -6,6 +6,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql\&logoColor=white)](https://www.postgresql.org/)
 [![Apache Parquet](https://img.shields.io/badge/Apache%20Parquet-Data%20Format-50ABF1?logo=apache\&logoColor=white)](https://parquet.apache.org/)
 [![Power BI](https://img.shields.io/badge/Power%20BI-Analytics-F2C811?logo=powerbi\&logoColor=black)](https://powerbi.microsoft.com/)
+[![SMTP](https://img.shields.io/badge/SMTP-Email%20Notifications-6B7280?logo=gmail\&logoColor=white)](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
 
 > An end-to-end weather data engineering platform that ingests historical and real-time weather data, processes it through a Bronze → Silver → Gold architecture, stores analytics-ready data in PostgreSQL, and delivers insights through Power BI.
 
@@ -15,14 +16,17 @@
 
 **WeatherLake Data Analytics Platform** is an end-to-end data engineering project designed to demonstrate how raw weather data can be transformed into reliable, analytics-ready datasets.
 
-The platform uses the **Open-Meteo API** as the primary data source and implements a layered data architecture:
+The platform uses the **Open-Meteo API** as the primary data source and implements a layered:
 
 **Bronze → Silver → Gold → Analytics**
+
+architecture.
 
 The project supports both:
 
 * **Historical weather data processing**
 * **Real-time weather data ingestion**
+* **Automated pipeline monitoring and email notifications**
 
 Apache Airflow orchestrates the pipelines, Apache Parquet is used for the Silver data layer, PostgreSQL provides the Gold analytical layer, and Power BI is used for visualization and analytics.
 
@@ -67,7 +71,6 @@ Apache Airflow orchestrates the pipelines, Apache Parquet is used for the Silver
                     │  └────────┘    └──────────┘ │
                     └──────────────┬───────────────┘
                                    │
-                                   │
                                    ▼
                     ┌──────────────────────────────┐
                     │          POWER BI             │
@@ -75,6 +78,35 @@ Apache Airflow orchestrates the pipelines, Apache Parquet is used for the Silver
                     │     Analytics Dashboard      │
                     │  Trends • KPIs • Geography  │
                     └──────────────────────────────┘
+```
+
+### Operational Monitoring
+
+```text
+                     ┌──────────────────┐
+                     │   Apache Airflow │
+                     │      DAG Run     │
+                     └────────┬─────────┘
+                              │
+                    ┌─────────┴─────────┐
+                    │                   │
+                    ▼                   ▼
+              ┌───────────┐       ┌───────────┐
+              │  SUCCESS  │       │  FAILURE  │
+              └─────┬─────┘       └─────┬─────┘
+                    │                   │
+                    └─────────┬─────────┘
+                              ▼
+                       ┌─────────────┐
+                       │    SMTP     │
+                       │    Server   │
+                       └──────┬──────┘
+                              │
+                              ▼
+                       ┌─────────────┐
+                       │    Email    │
+                       │ Notification│
+                       └─────────────┘
 ```
 
 ---
@@ -103,14 +135,14 @@ The project also includes a separate real-time pipeline for periodically retriev
 
 The Bronze layer stores the **raw API responses** without applying significant transformations.
 
-Purpose:
+**Purpose:**
 
 * Preserve the original source data
 * Provide traceability
 * Support reprocessing
 * Maintain a raw historical record
 
-Format:
+**Format:**
 
 ```text
 JSON
@@ -165,17 +197,17 @@ Example structure:
                           │ location_id
                           │
                           ▼
-                 ┌─────────────────┐
-                 │fact_weather_hourly│
-                 │─────────────────│
-                 │ location_id     │
-                 │ timestamp       │
-                 │ temperature     │
-                 │ humidity        │
-                 │ precipitation   │
-                 │ wind_speed      │
-                 │ weather_code    │
-                 └─────────────────┘
+                 ┌─────────────────────┐
+                 │ fact_weather_hourly │
+                 │─────────────────────│
+                 │ location_id         │
+                 │ timestamp           │
+                 │ temperature         │
+                 │ humidity            │
+                 │ precipitation       │
+                 │ wind_speed          │
+                 │ weather_code        │
+                 └─────────────────────┘
 ```
 
 This structure makes the data easier to query and consume from analytical tools.
@@ -199,7 +231,7 @@ Responsible for:
 * Fetching historical weather data
 * Creating Bronze raw data
 * Processing Silver Parquet files
-* Loading/transformation into Gold
+* Loading and transforming data into Gold
 * Supporting the historical weather dataset
 
 ### Real-Time Pipeline
@@ -214,6 +246,49 @@ Responsible for:
 * Storing raw real-time data in Bronze
 * Processing real-time data into Silver Parquet
 * Updating the Gold weather dataset
+
+---
+
+## 📧 Automated Email Notifications
+
+The WeatherLake platform includes **SMTP-based email notifications** integrated with Apache Airflow for pipeline monitoring and operational alerting.
+
+Email notifications help identify pipeline execution results without requiring continuous monitoring of the Airflow interface.
+
+### Notification Events
+
+The pipeline is configured to provide notifications for:
+
+* ✅ Successful pipeline execution
+* ❌ Pipeline failure
+* ⚠️ Pipeline errors requiring attention
+
+The notification workflow is:
+
+```text
+Airflow DAG
+     │
+     ├── Successful Run ──► SMTP ──► Email Notification
+     │
+     └── Failed Run ──────► SMTP ──► Email Notification
+```
+
+### SMTP Configuration
+
+The project uses Airflow's SMTP configuration to send automated email alerts.
+
+SMTP configuration is handled through the Airflow environment and is **not intended to expose credentials in the Git repository**.
+
+Sensitive information such as:
+
+* Email addresses
+* SMTP passwords
+* Application passwords
+* Authentication secrets
+
+should be configured locally and excluded from version control.
+
+This provides a basic operational monitoring layer for the data pipelines.
 
 ---
 
@@ -280,7 +355,7 @@ Place the dashboard screenshot in:
 docs/images/weatherlake-dashboard.png
 ```
 
-Then replace this section with:
+Then replace the placeholder above with:
 
 ```markdown
 ![WeatherLake Power BI Dashboard](docs/images/weatherlake-dashboard.png)
@@ -296,8 +371,8 @@ Then replace this section with:
 | API              | Open-Meteo           |
 | Orchestration    | Apache Airflow 3.3.1 |
 | Containerization | Docker               |
+| Notifications    | SMTP / Email         |
 | Raw Data         | JSON                 |
-| Data Processing  | Python               |
 | Silver Storage   | Apache Parquet       |
 | Gold Database    | PostgreSQL 16        |
 | Data Modeling    | Star Schema          |
@@ -399,17 +474,25 @@ http://localhost:8080
 
 ---
 
-### 4. Run the Pipeline
+### 4. Configure SMTP Notifications
+
+Before using email notifications, configure the required SMTP settings in the local Airflow environment.
+
+Do not commit SMTP passwords, application passwords, or other authentication credentials to GitHub.
+
+---
+
+### 5. Run the Pipeline
 
 The Airflow DAGs can be triggered from the Airflow web interface.
 
-Historical processing:
+**Historical processing:**
 
 ```text
 WeatherLakeDataPlatform
 ```
 
-Real-time processing:
+**Real-time processing:**
 
 ```text
 WeatherLakeRealtime
@@ -422,23 +505,37 @@ WeatherLakeRealtime
 The complete analytical workflow can be summarized as:
 
 ```text
-API
- ↓
-Ingestion
- ↓
-Bronze
- ↓
+Open-Meteo API
+      ↓
+Data Ingestion
+      ↓
+Bronze / Raw JSON
+      ↓
 Cleaning & Validation
- ↓
+      ↓
 Silver / Parquet
- ↓
+      ↓
 Transformation
- ↓
+      ↓
 Gold / PostgreSQL
- ↓
+      ↓
 Power BI
- ↓
+      ↓
 Analytics & Insights
+```
+
+Operational monitoring runs alongside the pipeline:
+
+```text
+Airflow
+   ↓
+DAG Execution
+   ↓
+Success / Failure
+   ↓
+SMTP
+   ↓
+Email Notification
 ```
 
 ---
@@ -460,6 +557,8 @@ This project demonstrates practical implementation of:
 * Real-time data ingestion
 * Data quality practices
 * Config-driven pipeline design
+* Automated pipeline success and failure notifications
+* SMTP-based operational alerting
 * Business intelligence and dashboard development
 * Git-based version control
 
@@ -488,7 +587,4 @@ Data Engineering | Data Analytics | Cloud & Big Data
 
 ---
 
-
-
-**Repository:**
-[Data Engineering Projects](https://github.com/alignasirkhan/Data-Engineering-Projects)
+⭐ If you find this project useful or interesting, consider giving the repository a star.
