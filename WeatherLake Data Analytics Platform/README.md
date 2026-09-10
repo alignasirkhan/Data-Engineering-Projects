@@ -347,19 +347,7 @@ The dashboard is designed to support analysis of:
 
 ### Power BI Dashboard
 
-> **Dashboard screenshot will be added here.**
-
-Place the dashboard screenshot in:
-
-```text
-docs/images/weatherlake-dashboard.png
-```
-
-Then replace the placeholder above with:
-
-```markdown
 ![WeatherLake Power BI Dashboard](docs/images/weatherlake-dashboard.png)
-```
 
 ---
 
